@@ -48,14 +48,6 @@ git clone [https://github.com/ThiagoCsilvaa/pitang-class-2026.git](https://githu
 4. Inicie o servidor de desenvolvimento:
 
    npm run dev
+
 Desenvolvido por Thiago Cavalcanti - 2026
 
-
----
-
-### Como adicionar este arquivo:
-1. No VS Code, crie um novo arquivo na pasta raiz chamado `README.md`.
-2. Cole o código acima.
-3. Salve, dê um `git add .`, `git commit -m "docs: adiciona readme detalhado"` e `git push`.
-
-**Quer que eu te ajude a adicionar um print do site no README ou o link direto da Vercel para o professor clicar?** Isso ajuda muito na nota!
