@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# 🚀 Thiago.Store - E-commerce Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma plataforma de e-commerce moderna desenvolvida como parte do treinamento da **Pitang**, focada em performance, design minimalista e uma experiência de usuário fluida.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este projeto foi construído utilizando as ferramentas mais modernas do ecossistema Web:
 
-## React Compiler
+* **React 19**: A última versão da biblioteca para interfaces reativas.
+* **Vite**: Bundler de próxima geração para um desenvolvimento ultra-rápido.
+* **TypeScript**: Garantia de tipagem estática e segurança no código.
+* **Tailwind CSS 4**: Estilização baseada em utilitários com foco em performance.
+* **TanStack Router**: Gerenciamento de rotas com segurança de tipos (Type-safe).
+* **Zustand**: Gerenciamento de estado leve e persistente para o carrinho de compras.
+* **Base UI**: Componentes acessíveis e sem estilização forçada para maior liberdade de design.
+* **Lucide React**: Biblioteca de ícones modernos e leves.
+* **Sonner**: Sistema de notificações (Toasts) elegante e funcional.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## ⚙️ Funcionalidades
 
-## Expanding the ESLint configuration
+- [x] **Autenticação**: Sistema de login integrado com a API DummyJSON.
+- [x] **Refresh Token**: Renovação automática de sessão com aviso de expiração via Modal.
+- [x] **Catálogo de Produtos**: Listagem dinâmica com troca de visualização (Grid/Tabela) e paginação.
+- [x] **Carrinho de Compras**: Persistência de dados no LocalStorage utilizando Zustand.
+- [x] **Dashboard Administrativo**: Visão geral de métricas, estoque e distribuição por categorias.
+- [x] **Gestão de Usuários**: Busca em tempo real e paginação de clientes cadastrados.
+- [x] **Design Responsivo**: Adaptado para dispositivos móveis e desktop.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧠 Dificuldades Encontradas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Durante o desenvolvimento, os principais desafios foram:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Configuração do TanStack Router**: A migração para um roteador 100% type-safe exigiu atenção na estrutura de pastas e na geração automática do `routeTree.gen.ts`.
+2.  **Ciclo de Vida do Token**: Implementar a lógica de `refresh token` de forma que a experiência do usuário não fosse interrompida, garantindo a segurança dos cookies.
+3.  **Hospedagem na Vercel**: Ajustar as configurações de reescrita de rotas (`vercel.json`) para que as rotas do roteador funcionassem corretamente após o deploy (evitando erro 404).
+4.  **Tailwind CSS 4**: Adaptação às novas diretivas de importação e ao sistema de cores OKLCH, que oferece maior precisão cromática mas exige uma curva de aprendizado diferente do RGB/HEX tradicional.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🚀 Como rodar o projeto localmente
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone o repositório:
+   ```bash
+git clone [https://github.com/ThiagoCsilvaa/pitang-class-2026.git](https://github.com/ThiagoCsilvaa/pitang-class-2026.git)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Instale as dependências:
+   ```npm install
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+3. Inicie o servidor de desenvolvimento:
+   ``` npm run dev
+Desenvolvido por Thiago Cavalcanti - 2026
+
+
+---
+
+### Como adicionar este arquivo:
+1. No VS Code, crie um novo arquivo na pasta raiz chamado `README.md`.
+2. Cole o código acima.
+3. Salve, dê um `git add .`, `git commit -m "docs: adiciona readme detalhado"` e `git push`.
+
+**Quer que eu te ajude a adicionar um print do site no README ou o link direto da Vercel para o professor clicar?** Isso ajuda muito na nota!
