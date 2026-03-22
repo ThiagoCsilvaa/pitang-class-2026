@@ -38,14 +38,14 @@ Durante o desenvolvimento, os principais desafios foram:
 ## 🚀 Como rodar o projeto localmente
 
 1. Clone o repositório:
-   ```bash
+   bash
 git clone [https://github.com/ThiagoCsilvaa/pitang-class-2026.git](https://github.com/ThiagoCsilvaa/pitang-class-2026.git)
 
 2. Instale as dependências:
-   ```npm install
+   npm install
 
 3. Inicie o servidor de desenvolvimento:
-   ``` npm run dev
+   npm run dev
 Desenvolvido por Thiago Cavalcanti - 2026
 
 
